@@ -19,7 +19,6 @@ m = Module.new do
     ENV.fetch('BUNDLER_VERSION', nil)
   end
 
-  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   def cli_arg_version
     return unless invoked_as_script? # don't want to hijack other binstubs
     return unless 'update'.start_with?(ARGV.first || ' ') # must be running `bundle update`
@@ -35,7 +34,6 @@ m = Module.new do
     end
     bundler_version
   end
-  # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 
   def gemfile
     gemfile = ENV.fetch('BUNDLE_GEMFILE', nil)
