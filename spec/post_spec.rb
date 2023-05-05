@@ -60,7 +60,7 @@ RSpec.describe Post, type: :model do
     it 'returns recents comments' do
       post = Post.create(author: @user, title: 'my post', text: 'this is my test post', likes_counter: 0,
                          comments_counter: 0)
-      10.times { Comment.create(post:post, author: @user, text: 'Hi Tom!') }
+      10.times { Comment.create(post:, author: @user, text: 'Hi Tom!') }
       expect(post.return_recent_comments).to match_array(post.comments.last(5))
     end
     it 'updates posts_counter' do
