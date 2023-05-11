@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
+
   private
 
   def set_post
@@ -33,6 +34,7 @@ class PostsController < ApplicationController
   def set_user
     @user = User.find(params[:user_id])
   end
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
