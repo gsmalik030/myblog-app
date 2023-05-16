@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :system, js: true do
   describe 'index page' do
     before(:example) do
-        @user = User.create(name: 'Malik', photo: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', bio: 'Web Developer',
-        posts_counter: 0)
+      @user = User.create(name: 'Malik', photo: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', bio: 'Web Developer',
+                          posts_counter: 0)
       @post1 = Post.create(author: @user, title: 'Hello One', text: 'This is my first post', likes_counter: 0,
                            comments_counter: 0)
       @post2 = Post.create(author: @user, title: 'Hello Two', text: 'This is my second post', likes_counter: 0,
@@ -75,10 +75,10 @@ RSpec.describe 'Posts', type: :system, js: true do
 
   describe 'show page' do
     before(:example) do
-        @user = User.create(name: 'Malik', photo: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', bio: 'Web Developer',
-        posts_counter: 0)
-        @user2 = User.create(name: 'Ghulam', photo: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', bio: 'Web Developer',
-        posts_counter: 0)
+      @user = User.create(name: 'Malik', photo: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', bio: 'Web Developer',
+                          posts_counter: 0)
+      @user2 = User.create(name: 'Ghulam', photo: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80', bio: 'Web Developer',
+                           posts_counter: 0)
       @post = Post.create(author: @user, title: 'Hello One', text: 'This is my first post', likes_counter: 0,
                           comments_counter: 0)
       @comment1 = Comment.create(author: @user, post: @post, text: 'I like this post comment one')
