@@ -36,7 +36,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- ruby installed and running
+- ruby and rails installed and running
 
 ### Setup
 
