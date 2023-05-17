@@ -22,7 +22,7 @@ Its a blog website.
 
 ### Tech Stack <a name="tech-stack"></a>
 
-- Languages: Ruby
+- Languages: Ruby on rails
 - Frameworks: N/A
 - Technologies Used: GIT, GITHUB, LINTERS
 
@@ -36,7 +36,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- ruby installed and running
+- ruby and rails installed and running
 
 ### Setup
 
@@ -65,6 +65,12 @@ In order to run this project you need:
 - GitHub: [@githubhandle](https://github.com/gsmalik030)
 - Twitter: [@twitterhandle](https://twitter.com/gsmalik030)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghulam-subbhani-4b1281252/)
+
+👤 **Emmanuel Simasiku**
+
+- GitHub: [Emmanuel-Simasiku](https://github.com/Mukumbuta)
+- Twitter: [@twitterhandle](https://twitter.com/Mukumbuta8)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mukumbuta/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
