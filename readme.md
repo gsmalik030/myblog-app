@@ -22,7 +22,7 @@ Its a blog website.
 
 ### Tech Stack <a name="tech-stack"></a>
 
-- Languages: Ruby
+- Languages: Ruby on rails
 - Frameworks: N/A
 - Technologies Used: GIT, GITHUB, LINTERS
 

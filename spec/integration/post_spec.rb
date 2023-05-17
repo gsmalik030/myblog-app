@@ -10,7 +10,7 @@ RSpec.describe 'Posts', type: :system, js: true do
       @post2 = Post.create(author: @user, title: 'Hello Two', text: 'This is my second post', likes_counter: 0,
                            comments_counter: 0)
       @post3 = Post.create(author: @user, title: 'Hello Three', text: 'This is my third post', likes_counter: 0,
-                           comments_counter: 0)
+                           comments_counter: 0)ad
       @post4 = Post.create(author: @user, title: 'Hello Fourth', text: 'This is my fourth post', likes_counter: 0,
                            comments_counter: 0)
       @comment1 = Comment.create(author: @user, post: @post2, text: 'I like this post')
