@@ -35,13 +35,13 @@ RSpec.describe 'Posts', type: :system, js: true do
     end
 
     it "renders the user's posts" do
-      expect(page).to have_content(@post1.title)
+      expect(page).to have_content(@post4.title)
       expect(page).to have_content(@post2.title)
       expect(page).to have_content(@post3.title)
     end
 
     it "renders some of the post's body" do
-      expect(page).to have_content(@post1.text[0, 50])
+      expect(page).to have_content(@post4.text[0, 50])
       expect(page).to have_content(@post2.text[0, 50])
       expect(page).to have_content(@post3.text[0, 50])
     end
