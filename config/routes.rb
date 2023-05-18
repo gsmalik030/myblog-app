@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   end
 
   root 'users#index'
-  resources :users, only: [:index, :show] do
-    resources :posts, except: [:update, :edit] do
-      resources :comments, only: [:new, :create, :destroy]
+  resources :users, only: %i[index show] do
+    resources :posts, except: %i[update edit] do
+      resources :comments, only: %i[new create destroy]
       resources :likes, only: [:create]
     end
   end

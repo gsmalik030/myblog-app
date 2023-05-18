@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  
   load_and_authorize_resource
   before_action :set_user, only: [:create]
   before_action :set_post, only: [:create]
@@ -21,7 +20,7 @@ class CommentsController < ApplicationController
     @post = @comment.post
     @user = @post.author
     @comment.destroy
-    @post.comments_counter -=1
+    @post.comments_counter -= 1
     redirect_to user_post_path(@user, @post) if @post.save
   end
 
