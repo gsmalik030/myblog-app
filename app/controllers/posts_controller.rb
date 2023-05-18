@@ -1,12 +1,21 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_user, only: %i[index create show]
   def index
     set_user
-    @posts = @user.posts.paginate(page: params[:page], per_page: 3)
+    @posts = @user.posts.includes(:author).paginate(page: params[:page], per_page: 3)
   end
 
   def show
     set_post
+  end
+
+  def destroy
+    @post = post.find(params[:id])
+    @user = @post.author
+    @post.destroy
+    @user.posts_counter -=1
+    redirect_to user_posts_path(@user) if @user.save
   end
 
   def create
