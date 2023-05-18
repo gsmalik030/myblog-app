@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @post = @comment.post
     @user = @post.author
+    @comment.destroy
     @post.comments_counter -=1
     redirect_to user_post_path(@user, @post) if @post.save
   end

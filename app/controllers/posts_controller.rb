@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = post.find(params[:id])
+    @post = Post.find(params[:id])
     @user = @post.author
     @post.destroy
     @user.posts_counter -=1
