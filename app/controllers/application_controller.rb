@@ -1,6 +1,3 @@
 class ApplicationController < ActionController::Base
-  # Your controller code here
-  def current_user
-    User.first
-  end
+  before_action :authenticate_user!
 end
