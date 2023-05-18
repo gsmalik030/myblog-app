@@ -17,7 +17,6 @@
 # 📖 My Blog App <a name="about-project"></a>
 
 Its a blog website.
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
