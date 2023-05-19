@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       post :auth, to: 'authentication#create'
       resources :users, only: [] do
         resources :posts, only: [:index] do
-          resources :comments, only: [:index, :create]
+          resources :comments, only: %i[index create]
         end
       end
     end
