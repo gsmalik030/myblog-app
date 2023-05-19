@@ -40,4 +40,11 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text)
   end
+
+  def get_comments
+    user = User.find(params[:user_id])
+    post = user.posts.find(params[:post_id])
+    comments = post.comments
+    render json: comments
+  end
 end
